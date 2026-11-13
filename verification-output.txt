@@ -1,0 +1,28 @@
+Verifying 24 reports in bugs.json against ./utils.js
+fn | input | buggy actual | expected (= reference) | result
+factorial | [2] | buggy=1 | expected=2 (ref=2) | VERIFIED
+factorial | [3] | buggy=2 | expected=6 (ref=6) | VERIFIED
+factorial | [4] | buggy=6 | expected=24 (ref=24) | VERIFIED
+factorial | [5] | buggy=24 | expected=120 (ref=120) | VERIFIED
+factorial | [6] | buggy=120 | expected=720 (ref=720) | VERIFIED
+factorial | [10] | buggy=362880 | expected=3628800 (ref=3628800) | VERIFIED
+factorial | 2 | buggy=1 | expected=2 (ref=2) | VERIFIED
+factorial | 3 | buggy=2 | expected=6 (ref=6) | VERIFIED
+factorial | 4 | buggy=6 | expected=24 (ref=24) | VERIFIED
+factorial | 5 | buggy=24 | expected=120 (ref=120) | VERIFIED
+factorial | 6 | buggy=120 | expected=720 (ref=720) | VERIFIED
+factorial | 10 | buggy=362880 | expected=3628800 (ref=3628800) | VERIFIED
+countVowels | ["AEIOU"] | buggy=0 | expected=5 (ref=5) | VERIFIED
+countVowels | ["HELLO"] | buggy=0 | expected=2 (ref=2) | VERIFIED
+countVowels | ["Apple"] | buggy=1 | expected=2 (ref=2) | VERIFIED
+countVowels | ["AEIOUaeiou"] | buggy=5 | expected=10 (ref=10) | VERIFIED
+countVowels | ["Education"] | buggy=4 | expected=5 (ref=5) | VERIFIED
+countVowels | ["UPPERCASE"] | buggy=0 | expected=4 (ref=4) | VERIFIED
+countVowels | "AEIOU" | buggy=0 | expected=5 (ref=5) | VERIFIED
+countVowels | "HELLO" | buggy=0 | expected=2 (ref=2) | VERIFIED
+countVowels | "Apple" | buggy=1 | expected=2 (ref=2) | VERIFIED
+countVowels | "AEIOUaeiou" | buggy=5 | expected=10 (ref=10) | VERIFIED
+countVowels | "Education" | buggy=4 | expected=5 (ref=5) | VERIFIED
+countVowels | "UPPERCASE" | buggy=0 | expected=4 (ref=4) | VERIFIED
+
+Result: 24 verified, 0 failed, 24 total
